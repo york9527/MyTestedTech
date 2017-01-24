@@ -1,0 +1,14 @@
+﻿@using FormAuthenticationTest.Resources
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style type="text/css">
+    span {
+        color: green;
+    }
+</style>
+[@Html.ActionLink("English","ChangeLanguage",new{language="en"})]
+[@Html.ActionLink("中文","ChangeLanguage",new{language="zh-cn"})]
+<h2>The current language is:<span>@Mui.Language</span></h2>

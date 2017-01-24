@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormAuthenticationTest", "FormAuthenticationTest\FormAuthenticationTest.csproj", "{D1E0431A-FE32-4411-809D-3D9E6785D756}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{70CCF1C6-C170-459A-8EC4-78E9F103EA17}"
+	ProjectSection(SolutionItems) = preProject
+		EditLog.txt = EditLog.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OtherProject", "OtherProject", "{69026ED6-CE1F-44E2-9366-0F9DB266398A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{377C4E66-47BB-474D-8F2C-F7946342B1DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloNHibernate", "HelloNHibernate\HelloNHibernate.csproj", "{590AB79C-D101-4ABE-BDE8-65D270109A94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderingSystem", "OrderingSystem\OrderingSystem.csproj", "{92E3ECD3-D972-4D02-8F64-CDFB25FBEFE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YieldTest", "YieldTest\YieldTest.csproj", "{12BA6A1F-D393-4F50-B7CF-8FD8C0991FC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMapperTest", "AutoMapperTest\AutoMapperTest.csproj", "{B5D989AA-B962-4A23-B6D0-BFE4ABA46523}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1E0431A-FE32-4411-809D-3D9E6785D756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1E0431A-FE32-4411-809D-3D9E6785D756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1E0431A-FE32-4411-809D-3D9E6785D756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1E0431A-FE32-4411-809D-3D9E6785D756}.Release|Any CPU.Build.0 = Release|Any CPU
+		{377C4E66-47BB-474D-8F2C-F7946342B1DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{377C4E66-47BB-474D-8F2C-F7946342B1DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{377C4E66-47BB-474D-8F2C-F7946342B1DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{377C4E66-47BB-474D-8F2C-F7946342B1DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{590AB79C-D101-4ABE-BDE8-65D270109A94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{590AB79C-D101-4ABE-BDE8-65D270109A94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{590AB79C-D101-4ABE-BDE8-65D270109A94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{590AB79C-D101-4ABE-BDE8-65D270109A94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92E3ECD3-D972-4D02-8F64-CDFB25FBEFE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92E3ECD3-D972-4D02-8F64-CDFB25FBEFE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92E3ECD3-D972-4D02-8F64-CDFB25FBEFE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92E3ECD3-D972-4D02-8F64-CDFB25FBEFE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12BA6A1F-D393-4F50-B7CF-8FD8C0991FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12BA6A1F-D393-4F50-B7CF-8FD8C0991FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12BA6A1F-D393-4F50-B7CF-8FD8C0991FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12BA6A1F-D393-4F50-B7CF-8FD8C0991FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5D989AA-B962-4A23-B6D0-BFE4ABA46523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5D989AA-B962-4A23-B6D0-BFE4ABA46523}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5D989AA-B962-4A23-B6D0-BFE4ABA46523}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5D989AA-B962-4A23-B6D0-BFE4ABA46523}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{377C4E66-47BB-474D-8F2C-F7946342B1DA} = {69026ED6-CE1F-44E2-9366-0F9DB266398A}
+		{590AB79C-D101-4ABE-BDE8-65D270109A94} = {69026ED6-CE1F-44E2-9366-0F9DB266398A}
+		{92E3ECD3-D972-4D02-8F64-CDFB25FBEFE5} = {69026ED6-CE1F-44E2-9366-0F9DB266398A}
+		{12BA6A1F-D393-4F50-B7CF-8FD8C0991FC8} = {69026ED6-CE1F-44E2-9366-0F9DB266398A}
+		{B5D989AA-B962-4A23-B6D0-BFE4ABA46523} = {69026ED6-CE1F-44E2-9366-0F9DB266398A}
+	EndGlobalSection
+EndGlobal

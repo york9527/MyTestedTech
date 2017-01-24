@@ -1,0 +1,12 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+@{
+    ViewBag.Title = "ErrorServer";
+    var msg = "No Error Details.";
+    if (Model != null)
+    {
+        msg = Model.Exception.Message;
+    }
+}
+
+<h2>Sorry,Server error!</h2>
+

@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+<p>管理员账号：admin,123456</p>
+@using(Html.BeginForm("Login","Home",FormMethod.Post))
+{
+    @Html.ValidationMessage("ERROR");//ValidationSummary();
+    <div>
+        @Html.Label("用户名")
+        @Html.TextBox("userName")
+    </div>
+    <div>
+        @Html.Label("密码")
+        @Html.Password("userPwd")
+    </div>
+    <div>
+        <input type="submit" value="登陆"/>
+        @Html.ActionLink("注册","Regester")
+        @Html.ActionLink("查看应用程序状态", "HttpApplicationTest", "ApplicationTest")
+    </div>
+    
+}

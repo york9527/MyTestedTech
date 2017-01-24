@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "CacheByPara";
+    var list = ViewBag.UserList as List<SelectListItem>;
+}
+
+<ul>
+    <li>本例基于Action的参数缓存，设置的缓存10秒。</li>
+    <li>每个用户名，在查询一次后，接下来的10秒内再查询，Visual Studio不会接收到断点。</li>
+</ul>
+
+@using (Html.BeginForm())
+{
+    <h4>当前用户名称：@ViewBag.UserName</h4>
+    <h4>当前用户邮箱：@ViewBag.Email</h4>
+    @Html.DropDownList("n",list)
+    <input type="submit" value ="查询" />
+}
+
+

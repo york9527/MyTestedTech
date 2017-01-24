@@ -1,0 +1,56 @@
+﻿div.ChatWin {
+    border: solid 1px gold;
+    width: 70%;
+    height: 450px;
+    float: left;
+}
+
+.ChatWin #Msg {
+    height: 350px;
+    border-bottom:solid 1px gold;
+    overflow: auto;
+    background: lightblue;
+}
+
+.ChatWin #msg b {
+    font-size: 12px;
+}
+
+.ChatWin #Input {
+    float: left;
+    border-right: solid 1px gold;
+    height: 100px;
+    width: 80%;
+}
+
+.ChatWin #Input textarea {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    resize: none;
+}
+
+.ChatWin #buttons .btLayout {
+    height: 50px;
+    text-align: center;
+}
+
+.ChatWin #buttons .btLayout input {
+    width: 19%;
+    height: 50px;
+}
+
+div.RoomWin {
+    border: solid 1px gold;
+    width: 20%;
+    height: 330px;
+    float: left;
+    overflow: auto;
+    background: lightblue;
+    padding: 10px;
+}
+
+div.RoomWin div {
+    background-color:lightslategray;
+    margin-top: 5px;
+}

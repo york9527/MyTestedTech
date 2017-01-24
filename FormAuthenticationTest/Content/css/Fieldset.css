@@ -1,0 +1,9 @@
+﻿fieldset {
+    border: 1px solid green;
+}
+legend {
+    color:green
+}
+input[type='file'] {
+    border: 1px solid;
+}

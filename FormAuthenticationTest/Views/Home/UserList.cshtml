@@ -1,0 +1,36 @@
+﻿@using FormAuthenticationTest.Models
+@{
+    ViewBag.Title = "UserList";
+}
+
+<style type="text/css">
+    table {
+        border: 1px solid;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>用户名</th>
+        <th>邮箱</th>
+        <th>最后活动日期</th>
+        <th>角色</th>
+    </tr>
+    @if (ViewBag.UserList != null)
+    {
+        foreach (var r in ViewBag.UserList as List<User>)
+        {
+            <tr>
+                <td>@r.UserName</td>
+                <td>@r.Email</td>
+                <td>@r.LastActiveDate</td>
+                <td>@foreach (var ro in r.Roles)
+                    {
+                        @ro.RoleName
+                    }
+                </td>
+            </tr>
+        }
+    }
+</table>
+@Html.ActionLink("注册","Regester")

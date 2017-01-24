@@ -1,0 +1,31 @@
+﻿@model List<Book>
+@{
+    ViewBag.Title = "Index";
+}
+<style type="text/css">
+    table{ border-collapse:collapse;}
+    tr { border: 1px solid;}
+    td{ padding: 2px;border: 1px, solid;}
+</style>  
+      
+<table>
+    <tr>
+        <th>封面截图</th>
+        <th>书名</th>
+        <th>作者</th>
+        <th>简介</th>
+        <th>出版时间</th>
+        <th>售价</th>
+    </tr>
+    @foreach (var b in Model)
+    {
+        <tr>
+            <td><img src="@Url.Content(ViewBag.ImagePath+b.Thumbnail)"/></td>
+            <td>@b.Title</td>
+            <td>@b.Author</td>
+            <td>@b.Summary</td>
+            <td>@b.Published</td>
+            <td>@b.Price</td>
+        </tr>
+    }
+</table>

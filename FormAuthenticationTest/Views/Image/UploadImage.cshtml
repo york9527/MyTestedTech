@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@Styles.Render("~/bundle/css")
+<h3>图片上传实例5</h3>
+<fieldset>
+    <legend>服务器端用原生的.NET方法保存图片</legend>
+    @using (Html.BeginForm("UploadImage", "Image", FormMethod.Post, new {enctype = "multipart/form-data"}))
+    {
+        <input type="file" value="选择图片" name="file"/>
+        <span>@Html.ValidationMessage("FormateError")</span>
+        <div><input type="submit" value="上传图片"/></div>
+    }
+</fieldset>
+<fieldset>
+    <legend>服务器端用Omu.Drawing组件保存图片</legend>
+    @using (Html.BeginForm("UploadImage2", "Image", FormMethod.Post, new {enctype = "multipart/form-data"}))
+    {
+        <input type="file" value="选择图片" name="file"/>
+        <span>@Html.ValidationMessage("FormateError")</span>
+        <div><input type="submit" value="上传图片"/></div>
+    }
+</fieldset>
+
+

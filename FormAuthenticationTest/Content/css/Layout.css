@@ -1,0 +1,11 @@
+﻿    .formDiv {
+        background-color: #d0d0d0;
+        height: 700px;
+        width: 900px;
+        margin: 0 auto 0 auto;
+        padding: 10px 220px 0 10px;
+    }
+    .field-validation-error {
+        display: block;
+        border: red solid 2px;
+    }

@@ -1,0 +1,23 @@
+﻿@model FormAuthenticationTest.Models.Role
+
+@{
+    ViewBag.Title = "Role";
+}
+
+@using (Html.BeginForm())
+{
+    if (ViewBag.RoleName!=null)
+    {
+        <h3>角色@(ViewBag.RoleName)添加成功。</h3>
+    }
+    <div>
+        角色名：@Html.TextBoxFor(d => d.RoleName)
+        @Html.ValidationMessageFor(d => d.RoleName)
+    </div>
+    <div>
+        角色描述：@Html.TextAreaFor(d => d.Description)
+        @Html.ValidationMessageFor(d => d.Description)
+    </div>
+    <input type="submit" value="保存角色"/>
+    @Html.ActionLink("查看","RoleList")
+}

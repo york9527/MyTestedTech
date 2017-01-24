@@ -1,0 +1,21 @@
+﻿@using System.Web.Mvc.Html
+@model FormAuthenticationTest.Controllers.ModelBindingController.Person
+
+@{
+    ViewBag.Title = "CreatePerson";
+}
+
+
+@using (Html.BeginForm("CreatePerson", "ModelBinding"))
+{
+    @Html.ValidationSummary("一个特殊提示")
+    <div>@Html.LabelFor(m => m.Name):@Html.EditorFor(m => m.Name)</div>
+    @Html.ValidationMessageFor(m=>m.Name)
+    <div>@Html.LabelFor(m => m.Email):@Html.EditorFor(m => m.Email)</div>
+    @Html.ValidationMessageFor(m=>m.Email)
+    <div>@Html.LabelFor(m => m.Phone):@Html.EditorFor(m => m.Phone)</div>
+    @Html.ValidationMessageFor(m=>m.Phone)
+    <div>@Html.LabelFor(m => m.Add.Country):@Html.EditorFor(m => m.Add.Country)</div>
+    <div>@Html.LabelFor(m => m.Add.City):@Html.EditorFor(m => m.Add.City)</div>
+    <button type="submit">提交</button>
+}

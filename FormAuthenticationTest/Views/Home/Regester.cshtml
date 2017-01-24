@@ -1,0 +1,36 @@
+﻿@model FormAuthenticationTest.Models.User
+
+@{
+    ViewBag.Title = "Regester";
+}
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(d=>d.UserName):
+        @Html.TextBoxFor(d=>d.UserName)
+        @Html.ValidationMessageFor(d=>d.UserName)
+    </div>
+    <div>
+        @Html.LabelFor(d=>d.Password):
+        @Html.PasswordFor(d=>d.Password)
+        @Html.ValidationMessageFor(d=>d.Password)
+    </div>
+    <div>
+        @Html.LabelFor(d=>d.Email):
+        @Html.TextBoxFor(d=>d.Email)
+        @Html.ValidationMessageFor(d=>d.Email)
+    </div>
+    <div>
+        @if (ViewBag.RoleList != null)
+        {
+            @:角色：
+            @Html.DropDownList("roleId", ViewBag.RoleList as List<SelectListItem>);
+        }
+        @Html.ValidationMessageFor(d => d.Roles)
+    </div>
+    <div>
+        <input type="submit" value="Regester"/>
+    </div>
+}
+

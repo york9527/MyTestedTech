@@ -1,0 +1,26 @@
+﻿@using System.Web.Mvc.Html
+@using FormAuthenticationTest.Models
+
+@{
+    ViewBag.Title = "Index";
+    var LinkList = new List<MenuLink>()
+        {
+            new MenuLink{Name="登陆",Action = "Login",Controller = "Home",Description="Form表单验证、角色授权"},
+            new MenuLink{Name="注册",Action = "Regester",Controller = "Home",Description = "Form表单验证，分配角色，授权"},
+            new MenuLink{Name="用户",Action = "UserList",Controller = "Home",Description = "显示用户列表"},
+            new MenuLink{Name="角色",Action = "RoleList",Controller = "Home",Description = "显示角色列表"},
+            new MenuLink{Name="邮件",Action = "Index",Controller = "Email",Description = "实现通过设定的服务器发送邮件给指定邮箱"},
+            new MenuLink{Name="上传",Action="Upload",Controller = "FileUpload",Description = "上传文件，Form上传，ajax上传"},
+            new MenuLink{Name="语言",Action="Index",Controller = "Language",Description = "通过资源文件，设置线程的语言信息，切换网站显示语言"},
+            new MenuLink{Name="图片",Action="UploadImage",Controller = "Image",Description = "上传图片，然后保存为不同大小，创建缩略图"},
+            new MenuLink{Name="异步",Action="Index",Controller = "Parallel",Description = "短时间占用ASP.NET的Thread Pool，异步方法完毕，再返回Response"},
+            new MenuLink{Name="聊天",Action="Index",Controller = "ChatRoom",Description = "利用SignalR制作的聊天室，实现机制：long polling（长轮询）"},
+            new MenuLink{Name="异常",Action="Index",Controller = "ErrorExecute",Description = "关于ASP.NET异常处理、记录、跟踪"},
+            new MenuLink{Name="缓存",Action="Index",Controller = "Cache",Description = "OutputCacheAttribute缓存输出"},
+            new MenuLink{Name="ajax",Action="Index",Controller = "Jsonp",Description = "ajax跨域请求解决方案"}
+        };
+    var list = new List<MenuLink>()
+        {
+            new MenuLink{Name="记录异常",Description="使用开源的elmah组件，来记录(本例保存到数据库)系统的异常。可以通过访问elmah.axd查看信息。"}
+        };
+}

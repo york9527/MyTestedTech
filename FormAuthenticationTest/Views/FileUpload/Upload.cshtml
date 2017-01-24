@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Upload";
+}
+
+@Styles.Render("~/bundle/css")
+@Scripts.Render("~/Script")
+
+<fieldset>
+    <legend>普通的文件上传</legend>
+    @using(Html.BeginForm("Upload","FileUpload",FormMethod.Post,new{enctype="multipart/form-data"})){
+        <input type="file" value="选择" name="file"/>@*这里必须要有name属性，并且要与action接受的参数名相同*@
+        <div>
+            <input type="submit" value="上传"/>
+        </div>
+    }
+</fieldset>
+
+<fieldset>
+    <legend>Jquery上传</legend>
+    <input type="file" id="file2" value="选择" name="file"/>
+    <div>
+        <input type="button" id="btUploadFile"  value="上传"/>
+    </div>
+</fieldset>
+
+

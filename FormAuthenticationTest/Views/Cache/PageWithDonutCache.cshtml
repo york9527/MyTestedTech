@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "PageWithDonutCache";
+}
+
+@Styles.Render("~/bundle/css")
+
+<h2>本页面利用MVCDonutCaching组件实现部分缓存一个页面的功能</h2>
+<hr/>
+<h3>当前时间：@ViewBag.TimeCached</h3>
+<fieldset>
+    <legend>不缓存，每次请求实时的内容</legend>
+    @Html.Action("DonutCache",true)
+</fieldset>

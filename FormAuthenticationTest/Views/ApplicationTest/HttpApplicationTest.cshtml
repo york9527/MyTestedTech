@@ -1,0 +1,21 @@
+﻿@using System.Collections
+@using System.Threading
+@using FormAuthenticationTest
+
+
+<div>
+    @{
+        <div style="width:500px;">
+            @{
+                var app = HttpContext.Current.ApplicationInstance as MvcApplication;
+                
+            }
+            <p>ApplicationId:@app.ApplicationId</p>@*HttpApplication 实例是维护在一个list中的，每次取出一个，赋值给HttpContext对象*@
+            <p>AppDomainId:@AppDomain.CurrentDomain.FriendlyName</p>@* 一般一个应用（网站）运行在一个 AppDomain 里面*@
+            <p>IsPoolThread:@Thread.CurrentThread.IsThreadPoolThread</p>
+            <p>ThreadId:@Thread.CurrentThread.ManagedThreadId</p>
+            <p>Thread Apartment:@Thread.CurrentThread.GetApartmentState()</p>
+        </div>
+    }
+
+</div>

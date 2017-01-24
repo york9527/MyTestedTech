@@ -1,0 +1,60 @@
+﻿@using System.Web.Mvc.Html
+@using System.Web.Optimization
+@{
+    ViewBag.Title = "";
+}
+
+@Styles.Render("~/Content/css/bundle")
+@Styles.Render("~/Content/themes/default/bundle")
+@Styles.Render("~/Content/themes/bundle")
+@Scripts.Render("~/Scripts/bundle")
+
+<ul id="menu">
+    <li>
+        <a href="#" class="drop">各种功能</a>
+        <div class="dropdown_4columns">
+            <div class="col_4">
+                <h2>测试MVC的各种功能</h2>
+            </div>
+            <div class="col_1">
+                <h3>授权认证</h3>
+                <ul>
+                    <li>@Html.ActionLink("登陆", "Login", new { controller = "Home" }, new { title = "Form表单验证、角色授权" })</li>
+                    <li>@Html.ActionLink("注册", "Regester", new { controller = "Home" }, new { title = "Form表单验证，分配角色，授权" })</li>
+                    <li>@Html.ActionLink("用户", "UserList", new { controller = "Home" }, new { title = "显示用户列表" })</li>
+                    <li>@Html.ActionLink("角色", "Login", new { controller = "Home" }, new { title = "显示角色列表" })</li>
+                    <li>@Html.ActionLink("语言", "Index", new { controller = "Language" }, new { title = "通过资源文件，设置线程的语言信息，切换网站显示语言" })</li>
+                </ul>
+            </div>
+            <div class="col_1">
+                <h3>邮件图片</h3>
+                <ul>
+                    <li>@Html.ActionLink("邮件", "Index", new { controller = "Email" }, new { title = "实现通过设定的服务器发送邮件给指定邮箱" })</li>
+                    <li>@Html.ActionLink("上传", "Upload", new { controller = "FileUpload" }, new { title = "上传文件，Form上传，ajax上传" })</li>
+                    <li>@Html.ActionLink("Ajax", "Index", new { controller = "Jsonp" }, new { title = "ajax跨域请求解决方案" })</li>
+                    <li>@Html.ActionLink("图片", "UploadImage", new { controller = "Image" }, new { title = "上传图片，然后保存为不同大小，创建缩略图" })</li>
+                    <li>@Html.ActionLink("异步", "Index", new { controller = "Parallel" }, new { title = "短时间占用ASP.NET的Thread Pool，异步方法完毕，再返回Response" })</li>
+                </ul>
+            </div>
+            <div class="col_1">
+                <h3>聊天自动绑定</h3>
+                <ul>
+                    <li>@Html.ActionLink("聊天", "Index", new { controller = "ChatRoom" }, new { title = "利用SignalR制作的聊天室，实现机制：long polling（长轮询）" })</li>
+                    <li>@Html.ActionLink("异常", "Index", new { controller = "ErrorExecute" }, new { title = "关于ASP.NET异常处理、记录、跟踪" })</li>
+                    <li>@Html.ActionLink("缓存", "Index", new { controller = "Cache" }, new { title = "OutputCacheAttribute缓存输出" })</li>
+                    <li>@Html.ActionLink("自动绑定", "CreatePerson", new { controller = "ModelBinding" }, new { title = "测试MVC的绑定机制" })</li>
+                </ul>
+            </div>
+            <div class="col_1">
+                <h3>Misc</h3>
+                <ul></ul>
+            </div>
+        </div>
+    </li>
+</ul>
+
+<div class="formDiv">
+    @RenderBody()    
+</div>
+
+

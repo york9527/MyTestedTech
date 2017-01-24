@@ -1,0 +1,48 @@
+﻿@using System.Web.Mvc.Html
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-2.0.3.js"></script>
+
+<script type="text/javascript">
+    $(function() {
+        $('#btAjax,#btAjax2').on('click', ajaxExceptionTest);
+    });
+    function ajaxExceptionTest() {
+        var u = "";
+        if (this.id == "btAjax") {
+            u = "ErrorExecute/ExceptionWithAjaxRequest";
+        } else {
+            u = "ErrorExecute/ExceptionWithAjaxRequest2";
+        }
+        
+        $.ajax({
+            url: u,
+            type:"get",
+            dataType: "json",
+            success: function (data, status) {
+                if (status == "success") {
+                    if (data.message) {
+                        alert(data.message);
+                    } else {
+                        alert(data);
+                    }
+                }
+            },
+            error:function(jqXHR, textStatus,error) {
+                alert(jqXHR.responseJSON.message);
+            }
+        });
+    }
+</script>
+
+<ol>
+    <li><h3>@Html.ActionLink("人为抛出一个异常","MakeError")</h3></li>
+    <li><h3>@Html.ActionLink("给Action设置HandleErrorAttribute处理异常","MakeError2")</h3></li>
+    <li><h3>@Html.ActionLink("通过全局过滤器处理异常","MakeError3")</h3></li>
+    <li><h3>@Html.ActionLink("优先级","MakeError4")</h3></li>
+    <li><h3>@Html.ActionLink("抛出一个404","MakeError5")</h3></li>
+</ol>
+
+<input type="button" id="btAjax" value="Ajax 抛出404"/>
+<input type="button" id="btAjax2" value="Ajax 抛出500"/>

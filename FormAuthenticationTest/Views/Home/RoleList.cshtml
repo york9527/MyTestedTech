@@ -1,0 +1,33 @@
+﻿@using FormAuthenticationTest.Models
+
+@{
+    ViewBag.Title = "RoleList";
+}
+<style type="text/css">
+    table {
+        border: 1px solid;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>角色</th>
+        <th style="width: 300px;">描述</th>
+        <th>创建日期</th>
+    </tr>
+    @if (ViewBag.RoleList != null)
+    {
+        foreach (var r in ViewBag.RoleList as List<Role>)
+        {
+            <tr>
+                <td>@r.RoleName</td>
+                <td>@r.Description</td>
+                <td>@r.CreDate</td>
+            </tr>
+        }
+    }
+</table>
+@Html.ActionLink("添加","Role")
+
+
+
